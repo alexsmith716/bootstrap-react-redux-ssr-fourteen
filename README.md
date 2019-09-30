@@ -2,7 +2,7 @@
 
 ## Overview:
 
-App builds off 'bootstrap-react-redux-webpack-ssr-thirteen'. 
+App builds off 'bootstrap-react-redux-webpack-ssr-thirteen and brrs-two-components'. 
 
 =============================================================
 =============================================================
