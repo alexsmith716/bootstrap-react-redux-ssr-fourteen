@@ -27,6 +27,8 @@ const getRandomInt = (min, max) => (
   Math.floor(Math.random() * (max - min)) + min
 )
 
+// https://gist.github.com/cereallarceny/ee1b86227aabaf4a4b2a3144b84dfaa2
+
 // function binding: creating a function that calls another function with a specific 'this' value and with specific arguments
 // function binding: technique used in conjunction with callbacks and event handlers
 // function binding: used to preserve code execution context while passing functions around as variables

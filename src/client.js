@@ -11,6 +11,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import localForage from 'localforage';
 import { getStoredState } from 'redux-persist';
+import { AppContainer } from 'react-hot-loader';
 
 import asyncMatchRoutes from './utils/asyncMatchRoutes';
 import { Provider } from 'react-redux';
@@ -100,11 +101,13 @@ const providers = {
   const hydrate = _routes => {
     const element = (
       <HelmetProvider>
-        <Provider store={store} {...providers}>
-          <Router history={history}>
-            <RouterTrigger trigger={pathname => triggerHooks(_routes, pathname)}>{renderRoutes(_routes)}</RouterTrigger>
-          </Router>
-        </Provider>
+        <AppContainer>
+          <Provider store={store} {...providers}>
+            <Router history={history}>
+              <RouterTrigger trigger={pathname => triggerHooks(_routes, pathname)}>{renderRoutes(_routes)}</RouterTrigger>
+            </Router>
+          </Provider>
+        </AppContainer>
       </HelmetProvider>
     );
 
