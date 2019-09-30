@@ -1,0 +1,28 @@
+# Run 'npx browserslist' in project directory to see what browsers selected
+
+> 1%
+not dead
+not op_mini all
+
+# ---------------------------
+# and_chr 76
+# and_uc 12.12
+# chrome 76
+# chrome 75
+# edge 18
+# firefox 68
+# ie 11
+# ios_saf 12.2-12.3
+# safari 12.1
+# samsung 9.2
+
+# ---------------------------
+# [production staging]
+# > 0.1%
+# not dead
+# not op_mini all
+
+# [development]
+# last 1 chrome version
+# last 1 firefox version
+# last 1 safari version
