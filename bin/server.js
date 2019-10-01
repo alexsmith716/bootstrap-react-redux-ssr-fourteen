@@ -5,5 +5,5 @@ global.__CLIENT__ = false;
 global.__SERVER__ = true;
 global.__DISABLE_SSR__ = false;
 
-// require('./start');
-require('./localStart');
+require('./start');
+// require('./localStart');

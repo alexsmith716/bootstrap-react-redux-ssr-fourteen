@@ -8,9 +8,8 @@
   "license": "MIT",
   "scripts": {
     "start2": "NODE_ENV=production WEBPACK_DLLS=0 node bin/server.js",
-    "clean2": "rimraf build/dist build/server build/service-worker.js",
     "dev": "DO_BUILD=1 concurrently --kill-others \"yarn start:dev:server\" \"yarn start:dev:api\" \"react-devtools\"",
-    "start:dev:server": "NODE_ENV=development NODE_PATH=src PORT=3000 APIPORT=3030 WEBPACK_DLLS=1 node ./bin/server.js --no-update-notifier",
+    "start:dev:server": "NODE_ENV=development NODE_PATH=src PORT=3000 APIPORT=3030 WEBPACK_DLLS=1 node ./bin/server.js",
     "start:dev:api": "NODE_ENV=development NODE_PATH=api APIPORT=3030 BABEL_DISABLE_CACHE=1 node ./bin/api.js",
     "react-devtools": "react-devtools",
     "prod": "concurrently \"yarn prod:bin:server\" \"yarn prod:bin:api\"",
@@ -29,8 +28,10 @@
     "@babel/runtime-corejs3": "^7.6.2",
     "@fortawesome/fontawesome-free": "^5.11.2",
     "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "compression": "^1.7.4",
+    "cookie-parser": "^1.4.4",
     "core-js": "^3.2.1",
     "d3": "^5.12.0",
     "express": "^4.17.1",
@@ -70,6 +71,7 @@
     "webpack-flush-chunks": "^2.0.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.6.0",
@@ -140,6 +142,18 @@
     "webpack-hot-server-middleware": "^0.6.0",
     "webpackbar": "^4.0.0",
     "workbox-webpack-plugin": "^4.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "+(bin)/**/*.js": [
+      "prettier-eslint --write --eslint-config-path .eslintrc",
+      "eslint -c .eslintrc",
+      "git add"
+    ]
   },
   "optionalDependencies": {}
 }
