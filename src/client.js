@@ -127,19 +127,19 @@ const providers = {
   // https://webpack.js.org/guides/development/#using-webpack-dev-middleware
   // https://github.com/webpack-contrib/webpack-hot-middleware
 
-  if (__DEVTOOLS__ && !window.__REDUX_DEVTOOLS_EXTENSION__) {
-    console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > __DEVTOOLS__ <<<<<<<<<<<<<<<<<<<<<<');
-    const devToolsDest = document.createElement('div');
-    window.document.body.insertBefore(devToolsDest, null);
-    const DevTools = require('./containers/DevTools/DevTools').default;
+  // if (__DEVTOOLS__ && !window.__REDUX_DEVTOOLS_EXTENSION__) {
+  //   console.log('>>>>>>>>>>>>>>>>>>> CLIENT.JS > __DEVTOOLS__ <<<<<<<<<<<<<<<<<<<<<<');
+  //   const devToolsDest = document.createElement('div');
+  //   window.document.body.insertBefore(devToolsDest, null);
+  //   const DevTools = require('./containers/DevTools/DevTools').default;
 
-    ReactDOM.hydrate(
-      <Provider store={store}>
-        <DevTools />
-      </Provider>,
-      devToolsDest
-    );
-  }
+  //   ReactDOM.hydrate(
+  //     <Provider store={store}>
+  //       <DevTools />
+  //     </Provider>,
+  //     devToolsDest
+  //   );
+  // }
 
   if (!__DEVELOPMENT__ && 'serviceWorker' in navigator) {
     try {
