@@ -8,10 +8,14 @@ module.exports = {
 // module.exports = ({ file }) => ({
 //   plugins: {
 //     'postcss-import': { root: file.dirname },
-//     'postcss-flexbugs-fixes': {},
-//     'postcss-preset-env': {},
+//     //'postcss-flexbugs-fixes': {},
+//     //'postcss-preset-env': {},
 //     'autoprefixer': {},
-//     'postcss-browser-reporter': {},
-//     'postcss-reporter': {}
+//     //'postcss-browser-reporter': {},
+//     //'postcss-reporter': {}
 //   }
 // })
+
+// 'postcss-url': [
+//   { filter: './**.*', url: asset => `./${asset.url}` }
+// ],
