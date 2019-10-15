@@ -143,6 +143,7 @@ class FilterableTable extends Component {
   //   return nextProps;
   // };
 
+  // 'render()' will not be invoked if 'shouldComponentUpdate()' returns false
   // render()
 
   // there may be delays between “render” phase lifecycles (like render) 
@@ -239,7 +240,7 @@ class FilterableTable extends Component {
     });
   };
 
-
+  // 'render()' will not be invoked if 'shouldComponentUpdate()' returns false
   render() {
 
     const styles = require('./scss/FilterableTable.scss');
