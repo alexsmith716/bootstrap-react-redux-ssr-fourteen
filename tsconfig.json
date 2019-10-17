@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "outDir": "./build/",
+    "jsx": "react",
+    "lib": ["es6", "es7", "dom"],
+    "module": "commonjs",
+    "noEmit": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es6",
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "build"],
+}
