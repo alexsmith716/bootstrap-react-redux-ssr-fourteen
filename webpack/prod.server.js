@@ -55,6 +55,13 @@ module.exports = {
         loader: 'babel-loader'
       },
       {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          // useCache: true,
+        },
+      },
+      {
         test: /\.(scss)$/,
         exclude: /node_modules/,
         use: [
@@ -187,7 +194,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.json', '.js', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.jsx', '.css', '.scss'],
   },
 
   plugins: [

@@ -91,6 +91,13 @@ const webpackConfig = {
         loader: 'babel-loader'
       },
       {
+        test: /\.tsx?$/,
+        loader: 'awesome-typescript-loader',
+        options: {
+          // useCache: true,
+        },
+      },
+      {
         test: /\.(scss)$/,
         use: [
           {
