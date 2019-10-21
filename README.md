@@ -13,9 +13,3 @@ https://github.com/microsoft/TypeScript-Handbook
 
 * lib:    List of library files to be included in the compilation
 * target: Specify ECMAScript target version
-
-
-core-js
-url-loader
-react-helmet-async
-mongoose
