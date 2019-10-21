@@ -17,6 +17,5 @@ https://github.com/microsoft/TypeScript-Handbook
 
 core-js
 url-loader
-react-tracking
 react-helmet-async
 mongoose
