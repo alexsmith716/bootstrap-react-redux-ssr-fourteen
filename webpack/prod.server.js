@@ -54,13 +54,13 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          // useCache: true,
-        },
-      },
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: 'awesome-typescript-loader',
+      //   options: {
+      //     // useCache: true,
+      //   },
+      // },
       {
         test: /\.(scss)$/,
         exclude: /node_modules/,

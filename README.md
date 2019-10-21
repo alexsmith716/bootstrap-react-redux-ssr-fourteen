@@ -7,8 +7,16 @@ App builds off 'bootstrap-react-redux-webpack-ssr-thirteen and brrs-two-componen
 =============================================================
 =============================================================
 
-@babel/plugin-transform-async-to-generator
+https://github.com/microsoft/TypeScript-Handbook
 
-@babel/plugin-syntax-dynamic-import
+#### compilerOptions:
 
-@babel/plugin-proposal-object-rest-spread
+* lib:    List of library files to be included in the compilation
+* target: Specify ECMAScript target version
+
+
+core-js
+url-loader
+react-tracking
+react-helmet-async
+mongoose

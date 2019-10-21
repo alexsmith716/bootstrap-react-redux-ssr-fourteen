@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import serialize from 'serialize-javascript';
 
 const Html = ({ assets, store, content }) => {
 
   return (
-    <html lang="en-US">
+    <Fragment>
       <head>
 
         <meta httpEquiv="content-type" content="text/html; charset=UTF-8" />
@@ -40,7 +40,7 @@ const Html = ({ assets, store, content }) => {
 
 
         {/* (>>>>>>> CONTENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
-        <div role="main" id="content" dangerouslySetInnerHTML={{ __html: content }} />
+        <div role="main" id="react-root" dangerouslySetInnerHTML={{ __html: content }} />
 
 
         {/* (>>>>>>> STORE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
@@ -63,7 +63,7 @@ const Html = ({ assets, store, content }) => {
           ))}
 
       </body>
-    </html>
+    </Fragment>
   );
 };
 
