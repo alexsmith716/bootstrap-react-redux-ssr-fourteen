@@ -16,7 +16,6 @@
     "@babel/plugin-syntax-dynamic-import",
     "react-hot-loader/babel",
     "universal-import",
-    "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-export-default-from"
   ]

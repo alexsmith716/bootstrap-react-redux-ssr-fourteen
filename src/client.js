@@ -41,7 +41,7 @@ const persistConfig = {
   whitelist: ['device', 'info', 'counter', 'filterableTable', 'temperatureCalculator']
 };
 
-const dest = document.getElementById('content');
+const dest = document.getElementById('react-root');
 
 const client = apiClient();
 
@@ -99,7 +99,7 @@ const providers = {
   };
 
   const hydrate = _routes => {
-    const element = (
+    const elementXX = (
       <HelmetProvider>
         <AppContainer>
           <Provider store={store} {...providers}>
@@ -112,9 +112,9 @@ const providers = {
     );
 
     if (dest.hasChildNodes()) {
-      ReactDOM.hydrate(element, dest);
+      ReactDOM.hydrate(elementXX, dest);
     } else {
-      ReactDOM.render(element, dest);
+      ReactDOM.render(elementXX, dest);
     }
   };
 

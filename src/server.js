@@ -191,7 +191,7 @@ export default ({ clientStats }) => async (req, res) => {
 
     const html = <Html assets={assets} store={store} content={content} />;
 
-    const ssrHtml = `<!doctype html>${ReactDOM.renderToString(html)}`;
+    const ssrHtml = `<!DOCTYPE html><html lang="en-US">${ReactDOM.renderToString(html)}</html>`;
     res.status(200).send(ssrHtml);
 
   } catch (error) {

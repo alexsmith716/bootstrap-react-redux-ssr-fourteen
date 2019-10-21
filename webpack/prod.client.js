@@ -41,6 +41,11 @@ const generatedIdent = (name, localName, lr) => {
 
 // Combining gzip compression with minification leads to the best reduction in file size
 
+// BABEL-LOADER:
+// Loads ES2015+ code and transpiles to ES5 using Babel
+// awesome-typescript-loader:
+// transform files from a different language (TypeScript) to JavaScript
+
 module.exports = {
 
   context: path.resolve(__dirname, '..'),
@@ -52,7 +57,7 @@ module.exports = {
 
   entry: {
     main: [
-      // './src/theme/scss/global/global.styles.scss',
+      // './src/theme/scss/global/styles.global.scss',
       'bootstrap',
       './src/client.js',
     ]
@@ -72,13 +77,13 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
-      {
-        test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          // useCache: true,
-        },
-      },
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: 'awesome-typescript-loader',
+      //   options: {
+      //     // useCache: true,
+      //   },
+      // },
       {
         test: /\.(scss)$/,
         use: [

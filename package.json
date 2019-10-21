@@ -13,6 +13,7 @@
     "start:dev:api": "NODE_ENV=development NODE_PATH=api APIPORT=3030 BABEL_DISABLE_CACHE=1 node ./bin/api.js",
     "react-devtools": "react-devtools",
     "prod": "concurrently \"yarn prod:bin:server\" \"yarn prod:bin:api\"",
+    "prodX": "concurrently \"yarn prod:bin:server\"",
     "prod:bin:server": "NODE_PATH=src NODE_ENV=production PORT=8080 APIPORT=3030 WEBPACK_DLLS=0 node --trace-deprecation ./bin/server.js",
     "prod:bin:api": "NODE_PATH=api NODE_ENV=production APIPORT=3030 BABEL_DISABLE_CACHE=1 node ./bin/api.js",
     "dlls": "webpack --display-error-details --config webpack/dllplugin.vendor.config.js",
