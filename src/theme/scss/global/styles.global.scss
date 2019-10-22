@@ -46,10 +46,12 @@ $dropdown-bg: darken($dropdown-bg, 20%);
 // @import "~bootstrap/scss/_media.scss";
 @import "~bootstrap/scss/_list-group.scss";
 @import "~bootstrap/scss/_close.scss";
+// @import "~bootstrap/scss/_toasts.scss";
 @import "~bootstrap/scss/_modal.scss";
 @import "~bootstrap/scss/_tooltip.scss";
 @import "~bootstrap/scss/_popover.scss";
 // @import "~bootstrap/scss/_carousel.scss";
+@import "~bootstrap/scss/_spinners.scss";
 @import "~bootstrap/scss/_utilities.scss";
 // @import "~bootstrap/scss/_print.scss";
 
@@ -130,5 +132,4 @@ $fa-var-facebook-square: \f082;
 // ---------------------------------------------
 
 @import "../app/mixins.scss";
-@import '../app/nprogress.scss';
 @import "../app/app.scss";

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import NProgress from 'nprogress';
 
 class Loading extends Component {
 
@@ -13,11 +12,11 @@ class Loading extends Component {
   };
 
   componentDidMount() {
-    NProgress.start();
+    //
   }
 
   componentWillUnmount() {
-    NProgress.done();
+    //
   }
 
   render() {
