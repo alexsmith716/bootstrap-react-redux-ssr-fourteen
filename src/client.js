@@ -102,6 +102,8 @@ const providers = {
     // Fetch mandatory data dependencies for 2nd route change onwards:
     await trigger('defer', components, triggerLocals);
 
+    spinnerContainer.classList.remove('spinner-border');
+
   };
 
   const hydrate = _routes => {
