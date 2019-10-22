@@ -42,6 +42,9 @@ const persistConfig = {
 
 const spinnerContainer = document.createElement('div');
 
+spinnerContainer.classList.add('d-inline-flex', 'spinner-layered', 'text-light', 'spinner-border');
+// spinnerContainer.className = 'd-inline-flex spinner-layered text-light spinner-border spinner-progress';
+
 const dest = document.getElementById('react-root');
 
 const client = apiClient();
