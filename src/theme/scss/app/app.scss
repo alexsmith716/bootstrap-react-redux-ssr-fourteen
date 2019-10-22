@@ -2,6 +2,15 @@
 // GLOBAL STYLING
 // ================================================================================
 
+.spinner-layered {
+  pointer-events: none;
+  // position: relative;
+  position: absolute;
+  z-index: 9999;
+  top: 11px;
+  right: 6px;
+}
+
 html {
   position: relative;
   min-height: 100%;

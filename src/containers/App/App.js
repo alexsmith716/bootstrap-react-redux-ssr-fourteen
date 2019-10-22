@@ -143,8 +143,8 @@ class App extends Component {
                     <a className="nav-link dropdown-toggle" href="#" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Interesting Links</a>
                     <div className="dropdown-menu" aria-labelledby="dropdown02">
                       <Link to='/about' className="dropdown-item js-scroll-trigger">About</Link>
-                      <Link to='/aboutone' className="dropdown-item js-scroll-trigger">About One!</Link>
-                      <Link to='/abouttwo' className="dropdown-item js-scroll-trigger">About Two!</Link>
+                      <Link to='/aboutone' className="dropdown-item js-scroll-trigger">About One</Link>
+                      <Link to='/abouttwo' className="dropdown-item js-scroll-trigger">About Two</Link>
                       <Link to='/aboutthree' className="dropdown-item js-scroll-trigger">About Three</Link>
                       <Link to='/aboutfour' className="dropdown-item js-scroll-trigger">About Four</Link>
                       <Link to='/stickyfooter' className="dropdown-item js-scroll-trigger">StickyFooter</Link>

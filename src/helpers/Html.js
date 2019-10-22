@@ -38,10 +38,10 @@ const Html = ({ assets, store, content }) => {
 
       <body>
 
+        {/* <div className="d-inline-flex p-2 float-right spinner-layered text-light" /> */}
 
         {/* (>>>>>>> CONTENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         <div role="main" id="react-root" dangerouslySetInnerHTML={{ __html: content }} />
-
 
         {/* (>>>>>>> STORE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         {store && (
@@ -51,10 +51,8 @@ const Html = ({ assets, store, content }) => {
           />
         )}
 
-
         {/* (>>>>>>> DEV DLLS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         { __DLLS__ && <script key="dlls__vendor" src="/dlls/dll__vendor.js" charSet="UTF-8" /> }
-
 
         {/* (>>>>>>> SCRIPTS  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         {assets.scripts 

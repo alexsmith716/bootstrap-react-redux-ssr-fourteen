@@ -20,7 +20,6 @@ import routes from './routes';
 import apiClient from './helpers/apiClient';
 import configureStore from './redux/configureStore';
 import isOnline from './utils/isOnline';
-import NProgress from 'nprogress';
 import './js/app';
 
 // localforage/persist:root: "{\"counter\":\"{\\\"countPreloadedState\\\":42,\\\"countMultireducer\\\":0}\",\"device\":\"{\\\"isMobile\\\":false}\",\"info\":\"{\\\"notifs\\\":{},\\\"device\\\":{\\\"isMobile\\\":null},\\\"info\\\":{\\\"loaded\\\":false},\\\"counter\\\":{\\\"countPreloadedState\\\":null,\\\"countMultireducer\\\":0},\\\"filterableTable\\\":{\\\"filterText\\\":\\\"\\\",\\\"inStockOnly\\\":false,\\\"loaded\\\":false,\\\"dropDownOptionSelected\\\":\\\"\\\",\\\"error\\\":false,\\\"errorResponse\\\":{\\\"message\\\":\\\"\\\",\\\"documentation_url\\\":\\\"\\\"},\\\"isLoading\\\":false,\\\"fetchedData\\\":null,\\\"didInvalidate\\\":false},\\\"temperatureCalculator\\\":{\\\"temperature\\\":\\\"\\\",\\\"scale\\\":\\\"c\\\"},\\\"isLoading\\\":false,\\\"loaded\\\":true,\\\"data\\\":1561053136395}\"}"
@@ -71,7 +70,6 @@ const providers = {
   });
 
   const triggerHooks = async (_routes, pathname) => {
-    NProgress.start();
 
     const { components, match, params } = await asyncMatchRoutes(_routes, pathname);
     
@@ -95,11 +93,10 @@ const providers = {
     // Fetch mandatory data dependencies for 2nd route change onwards:
     await trigger('defer', components, triggerLocals);
 
-    NProgress.done();
   };
 
   const hydrate = _routes => {
-    const elementXX = (
+    const element = (
       <HelmetProvider>
         <AppContainer>
           <Provider store={store} {...providers}>
@@ -112,9 +109,9 @@ const providers = {
     );
 
     if (dest.hasChildNodes()) {
-      ReactDOM.hydrate(elementXX, dest);
+      ReactDOM.hydrate(element, dest);
     } else {
-      ReactDOM.render(elementXX, dest);
+      ReactDOM.render(element, dest);
     }
   };
 

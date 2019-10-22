@@ -151,7 +151,6 @@ $fa-var-facebook-square: \f082;
 // ---------------------------------------------
 
 @import "../app/mixins.scss";
-@import '../app/nprogress.scss';
 @import "../app/app.scss";
 `}
             </pre>
