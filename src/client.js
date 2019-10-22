@@ -47,6 +47,8 @@ spinnerContainer.classList.add('d-inline-flex', 'spinner-layered', 'text-light',
 
 const dest = document.getElementById('react-root');
 
+document.body.insertBefore(spinnerContainer, dest);
+
 const client = apiClient();
 
 const providers = {
