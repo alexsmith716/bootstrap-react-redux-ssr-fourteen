@@ -40,6 +40,8 @@ const persistConfig = {
   whitelist: ['device', 'info', 'counter', 'filterableTable', 'temperatureCalculator']
 };
 
+const spinnerContainer = document.createElement('div');
+
 const dest = document.getElementById('react-root');
 
 const client = apiClient();
