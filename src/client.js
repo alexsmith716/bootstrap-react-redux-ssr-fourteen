@@ -78,6 +78,8 @@ const providers = {
 
   const triggerHooks = async (_routes, pathname) => {
 
+    spinnerContainer.classList.add('spinner-border');
+
     const { components, match, params } = await asyncMatchRoutes(_routes, pathname);
     
     const triggerLocals = {
