@@ -42,8 +42,8 @@ const persistConfig = {
 
 const spinnerContainer = document.createElement('div');
 
-spinnerContainer.classList.add('d-inline-flex', 'spinner-layered', 'text-light', 'spinner-border');
-// spinnerContainer.className = 'd-inline-flex spinner-layered text-light spinner-border spinner-progress';
+spinnerContainer.classList.add('d-inline-flex', 'spinner-layered', 'text-light');
+// spinnerContainer.className = 'd-inline-flex spinner-layered text-light';
 
 const dest = document.getElementById('react-root');
 
@@ -103,7 +103,6 @@ const providers = {
     await trigger('defer', components, triggerLocals);
 
     spinnerContainer.classList.remove('spinner-border');
-
   };
 
   const hydrate = _routes => {
