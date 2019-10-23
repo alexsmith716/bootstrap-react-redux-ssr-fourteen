@@ -38,8 +38,6 @@ const Html = ({ assets, store, content }) => {
 
       <body>
 
-        {/* <div className="d-inline-flex p-2 float-right spinner-layered text-light" /> */}
-
         {/* (>>>>>>> CONTENT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         <div role="main" id="react-root" dangerouslySetInnerHTML={{ __html: content }} />
 
