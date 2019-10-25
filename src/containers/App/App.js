@@ -15,6 +15,12 @@ import { FontsModal } from '../../components';
 import config from '../../../config/config';
 import { isLoaded as isInfoLoaded, load as loadInfo } from '../../redux/modules/info';
 
+@connect(state => ({
+  online: state.online,
+  userAgent: state.device.userAgent,
+  isBot: state.device.isBot
+}))
+
 @provideHooks({
   fetch: async ({ store: { dispatch, getState } }) => {
     if (!isInfoLoaded(getState())) {
@@ -30,6 +36,9 @@ class App extends Component {
   static propTypes = {
     route: PropTypes.objectOf(PropTypes.any).isRequired,
     location: PropTypes.objectOf(PropTypes.any).isRequired,
+    online: PropTypes.bool.isRequired,
+    userAgent: PropTypes.string.isRequired,
+    isBot: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
@@ -61,8 +70,7 @@ class App extends Component {
 
   render() {
 
-    const { notifs, route } = this.props;
-
+    const { notifs, route, online, userAgent, isBot } = this.props;
     const styles = require('./styles/App.scss');
 
     return (
@@ -159,6 +167,18 @@ class App extends Component {
 
           <div className={styles.appContent}>
             {renderRoutes(route.routes)}
+          </div>
+
+          {/* ------------- Device State ----------- */}
+
+          <div className="card text-center">
+            <div className="card-body bg-light">
+          
+              <p className="color-olive font-opensans-bold-webfont">{`'online' store state is ${online} !`}</p>
+              <p className="color-crimson font-philosopher-bold-webfont">{`device 'userAgent' store state is ${userAgent} !`}</p>
+              <p className="color-orangered font-norwester">{`device 'bot' store state is ${isBot} !`}</p>
+
+            </div>
           </div>
 
           {/* --------------- InfoBar ---------------- */}
