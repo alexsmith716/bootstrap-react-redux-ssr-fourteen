@@ -40,7 +40,7 @@ const getRandomInt = (min, max) => (
 //    * the combination of a function (return async function(req, res)) 
 //    * and the lexical environment within which that function was DECLARED ({ clientStats })
 // --------------------------
-export default ({ clientStats }) => async (req, res) => {
+export default ({ clientStats }) => async (req, res, next) => {
 // export default function({ clientStats }) {
 //   // anonymous wrapper that creates a closure with access to above lexical env var '{ clientStats }'
 //   // returned as express middleware
