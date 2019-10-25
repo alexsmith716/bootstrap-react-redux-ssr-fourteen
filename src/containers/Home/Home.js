@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import { connect } from 'react-redux';
-
-@connect(state => ({
-  online: state.online
-}))
 
 class Home extends Component {
 
-  static propTypes = {
-    online: PropTypes.bool.isRequired
-  };
-
   render() {
 
-    const { online } = this.props;
     const styles = require('./scss/Home.scss');
 
     return (
@@ -87,17 +77,8 @@ class Home extends Component {
             </div>
 
           </div>
-
-          <div className="row">
-            <div className="col-lg-12 d-flex justify-content-center">
-              <p className="color-crimson font-opensans-bold-webfont">{`'online' store state is ${online} !`}</p>
-            </div>
-          </div>
-
         </div>
-
       </div>
-
     );
   }
 }
