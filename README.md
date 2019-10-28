@@ -57,3 +57,27 @@ Possible values are:
 ► ESNext.Intl
 ► ESNext.Symbol
 
+#### =================================
+
+babel-runtime operations >>> babel-polyfill >>> emulate an ES2015 environment but in a different way
+
+babel-polyfill: emulates ES2015 by assigning methods on the global (adds Promise to global scope)
+babel-runtime: doesn't change the global namespace
+
+typescript will not add any polyfill to your code
+
+opposed to Babel, TypeScript does not have a runtime
+
+set target to ES6+ and use Babel on the result
+
+#### =================================
+
+Typescript && Babel Bundling Methods:
+
+METHOD 1:
+Babel   >>>>>>>> webpack > babel-loader > typescript loader (ATL)
+(combine 2 compilers > merge JS outputted from TS compile > pipe that JS output through Babel-loader > result is ES5 with Babel provided polyfills)
+
+METHOD 2:
+Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescript' > babel preset '@babel/typescript' > webpack 'test: /\.(js|ts)x?$/'
+
