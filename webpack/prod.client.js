@@ -89,6 +89,10 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   test: /\.tsx?$/,
+      //   loader: 'awesome-typescript-loader',
+      // },
       {
         test: /\.(scss)$/,
         use: [
