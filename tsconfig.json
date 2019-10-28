@@ -6,7 +6,7 @@
     "experimentalDecorators": true,
     "outDir": "./build/",
     "jsx": "react",
-    "lib": ["es5", "es6", "es7", "esnext", "dom"],
+    "lib": ["DOM","ES6","DOM.Iterable","ScriptHost"], // defaults
     "module": "commonjs",
     "noEmit": true,
     "noImplicitAny": true,
@@ -16,7 +16,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es6",
+    "target": "esnext",
   },
   "include": [
     "./src/tsTest/*.tsx"

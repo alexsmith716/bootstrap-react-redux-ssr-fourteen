@@ -22,7 +22,15 @@ import configureStore from './redux/configureStore';
 import isOnline from './utils/isOnline';
 import './js/app';
 
-// localforage/persist:root: "{\"counter\":\"{\\\"countPreloadedState\\\":42,\\\"countMultireducer\\\":0}\",\"device\":\"{\\\"isMobile\\\":false}\",\"info\":\"{\\\"notifs\\\":{},\\\"device\\\":{\\\"isMobile\\\":null},\\\"info\\\":{\\\"loaded\\\":false},\\\"counter\\\":{\\\"countPreloadedState\\\":null,\\\"countMultireducer\\\":0},\\\"filterableTable\\\":{\\\"filterText\\\":\\\"\\\",\\\"inStockOnly\\\":false,\\\"loaded\\\":false,\\\"dropDownOptionSelected\\\":\\\"\\\",\\\"error\\\":false,\\\"errorResponse\\\":{\\\"message\\\":\\\"\\\",\\\"documentation_url\\\":\\\"\\\"},\\\"isLoading\\\":false,\\\"fetchedData\\\":null,\\\"didInvalidate\\\":false},\\\"temperatureCalculator\\\":{\\\"temperature\\\":\\\"\\\",\\\"scale\\\":\\\"c\\\"},\\\"isLoading\\\":false,\\\"loaded\\\":true,\\\"data\\\":1561053136395}\"}"
+// https://github.com/zloirock/core-js/tree/master/packages/core-js-compat
+// data about the necessity of core-js modules
+// and API for getting a list of required core-js modules by browserslist query
+// const { list, targets } = require('core-js-compat')({
+//   targets: '> 1%',
+//   filter: 'es.',
+// });
+// console.log(targets);
+
 const persistConfig = {
   key: 'root',
   storage: localForage,
