@@ -63,10 +63,15 @@ module.exports = {
       },
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
-        options: {
-          // useCache: true,
-        },
+        loader: [
+          'babel-loader',
+          {
+            loader: 'awesome-typescript-loader',
+            options: {
+              // useCache: true
+            },
+          },
+        ],
       },
       {
         test: /\.(scss)$/,
