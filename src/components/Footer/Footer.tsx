@@ -4,9 +4,15 @@ interface FooterProps {
   footer: string;
   flexContainer: string;
   colorGoldLocal: string;
+  complexProp:{
+    [categories:string]:{
+      size:string;
+      color?:string;
+    }
+  };
 }
 
-function Footer({ footer,flexContainer,colorGoldLocal }: FooterProps) {
+function Footer({ footer,flexContainer,colorGoldLocal,complexProp }: FooterProps) {
 
   return (
 

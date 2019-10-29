@@ -191,6 +191,14 @@ class App extends Component {
             footer={styles.footer} 
             flexContainer={styles.flexContainer} 
             colorGoldLocal={styles.colorGoldLocal}
+            complexProp={
+              {
+                "categories": [{
+                  "size": "large",
+                  "color": "brown",
+                }]
+              }
+            }
           />
 
           {/* --------------- Modals ----------------- */}
