@@ -21,7 +21,7 @@
     "target": "esnext",
   },
   "include": [
-    "./src/tsTest/*.tsx"
+    "./src/**/*.tsx"
   ],
   "exclude": [
     "node_modules/**"
