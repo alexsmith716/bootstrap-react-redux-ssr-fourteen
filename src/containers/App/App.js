@@ -188,7 +188,9 @@ class App extends Component {
           {/* --------------- Footer ----------------- */}
 
           <Footer 
-            styles={ styles }
+            footer={styles.footer} 
+            flexContainer={styles.flexContainer} 
+            colorGoldLocal={styles.colorGoldLocal}
           />
 
           {/* --------------- Modals ----------------- */}
