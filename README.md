@@ -81,3 +81,9 @@ Babel   >>>>>>>> webpack > babel-loader > typescript loader (ATL)
 METHOD 2:
 Babel 7 >>>>>>>> '@babel/preset-typescript' && '@babel/plugin-transform-typescript' > babel preset '@babel/typescript' > webpack 'test: /\.(js|ts)x?$/'
 
+#### =================================
+
+`typescript` and `prop-types` serve different purposes:
+* 'Typescript' validates types at compile time
+* 'PropTypes' are checked at runtime
+

@@ -22,6 +22,7 @@ import config from '../config/config';
 import apiClient from './helpers/apiClient';
 
 import { HelmetProvider } from 'react-helmet-async';
+import serialize from 'serialize-javascript';
 
 // const getRandomInt = (min, max) => (
 //   Math.floor(Math.random() * (max - min)) + min
@@ -121,7 +122,9 @@ export default ({ clientStats }) => async (req, res, next) => {
     const used = process.memoryUsage().heapUsed / 1024 / 1024;
     console.log(`SERVER.JS: The script uses approximately ${Math.round(used * 100) / 100} MB`);
 
-    const html = <Html assets={assets} store={store} content={content} />;
+    const reduxStore = serialize(store.getState());
+
+    const html = <Html assets={assets} content={content} store={reduxStore} />;
 
     const ssrHtml = `<!DOCTYPE html><html lang="en-US">${ReactDOM.renderToString(html)}</html>`;
     res.status(200).send(ssrHtml);
