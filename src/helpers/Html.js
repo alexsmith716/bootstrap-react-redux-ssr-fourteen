@@ -1,9 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import serialize from 'serialize-javascript';
 
-const Html = ({ assets, store, content }) => {
-
+function Html({ assets, content, store }) {
   return (
     <Fragment>
       <head>
@@ -44,7 +42,7 @@ const Html = ({ assets, store, content }) => {
         {/* (>>>>>>> STORE <<<<<<<<<<<<<<<<<<<<<<<<<<<<<) */}
         {store && (
           <script
-            dangerouslySetInnerHTML={{ __html: `window.__PRELOADED__=true;window.__data=${serialize(store.getState())};` }}
+            dangerouslySetInnerHTML={{ __html: `window.__PRELOADED__=true;window.REDUX_DATA=${store};`}}
             charSet="UTF-8"
           />
         )}
@@ -66,7 +64,7 @@ const Html = ({ assets, store, content }) => {
 Html.propTypes = {
   assets: PropTypes.shape({ stylesheets: PropTypes.array, scripts: PropTypes.array }),
   content: PropTypes.string,
-  store: PropTypes.shape({ getState: PropTypes.func })
+  // store: PropTypes.shape({ getState: PropTypes.func })
 };
 
 Html.defaultProps = {

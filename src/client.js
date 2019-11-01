@@ -69,7 +69,7 @@ const providers = {
   // delays rendering of app UI until persisted state has been retrieved and saved to redux
   const preloadedState = await getStoredState(persistConfig);
 
-  const online = window.__data ? true : await isOnline();
+  const online = window.REDUX_DATA ? true : await isOnline();
 
   const history = createBrowserHistory();
 
@@ -77,7 +77,7 @@ const providers = {
     history,
     data: {
       ...preloadedState,
-      ...window.__data,
+      ...window.REDUX_DATA,
       online
     },
     helpers: providers,
